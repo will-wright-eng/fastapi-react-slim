@@ -12,6 +12,7 @@
   "_copy_without_render": [
     "Makefile",
     "LICENSE",
-    ".pre-commit-config.yaml"
+    ".pre-commit-config.yaml",
+    ".gitignore"
   ]
 }

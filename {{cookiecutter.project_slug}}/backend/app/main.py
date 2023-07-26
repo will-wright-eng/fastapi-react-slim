@@ -7,7 +7,6 @@ from app.api.api_v1.routers.auth import auth_router
 from app.core import config
 from app.db.session import SessionLocal
 from app.core.auth import get_current_active_user
-from app import tasks
 
 
 app = FastAPI(
