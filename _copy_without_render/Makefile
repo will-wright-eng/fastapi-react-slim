@@ -29,10 +29,5 @@ open: ## open http://localhost:8000/
 open-api: ## open http://localhost:8000/api/docs
 	open http://localhost:8000/api/docs
 
-poetry-set: ## updates lockfile, exports requirements.txt, and reinstalls
-	poetry lock -n && poetry export --without-hashes > requirements.txt
-	poetry install -n
-	#poetry run mypy --install-types --non-interactive ./
-
 docker-kill: ## kill all docker containers
 	for id in $$(docker ps --format "{{.ID}}"); do docker kill $$id; done
