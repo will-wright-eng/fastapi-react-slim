@@ -8,5 +8,10 @@
   "superuser_email": "admin@{{cookiecutter.project_name}}.com",
   "superuser_password": "password",
   "secret_key": "super_secret",
-  "gh_username": "will-wright-eng"
+  "gh_username": "will-wright-eng",
+  "_copy_without_render": [
+    "Makefile",
+    "LICENSE",
+    ".pre-commit-config.yaml"
+  ]
 }
