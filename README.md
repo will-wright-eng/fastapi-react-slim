@@ -26,10 +26,6 @@ modern stack.
     components](#Higher-Order-Components) for handling authentication
 - **[PostgreSQL](https://www.postgresql.org/)** for the database
 - **[SqlAlchemy](https://www.sqlalchemy.org/)** for ORM
-- **[Celery](http://www.celeryproject.org/)** for [background
-  tasks](#background-tasks) and [Redis](https://redis.io/) as a message broker
-  - Includes [Flower](https://flower.readthedocs.io/en/latest/) for task
-    monitoring
 - **[Alembic](https://alembic.sqlalchemy.org/en/latest/)** for database
   migrations
 - **[Pytest](https://docs.pytest.org/en/latest/)** for backend tests
