@@ -16,8 +16,6 @@ help: ## list make commands
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 init: ## init project
-	brew install python@3.8
-	docker-compose run --rm backend alembic upgrade head
 	bash scripts/build.sh
 
 up: ## start app (no daemon mode)
