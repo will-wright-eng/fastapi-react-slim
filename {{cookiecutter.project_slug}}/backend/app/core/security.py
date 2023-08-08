@@ -7,7 +7,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/token")
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-SECRET_KEY = "{{cookiecutter.secret_key}}"
+SECRET_KEY = "super_secret"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 

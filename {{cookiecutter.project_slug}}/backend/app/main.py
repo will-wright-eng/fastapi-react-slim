@@ -3,6 +3,7 @@ from starlette.requests import Request
 import uvicorn
 
 from app.api.api_v1.routers.users import users_router
+from app.api.api_v1.routers.bot import bot_router
 from app.api.api_v1.routers.auth import auth_router
 from app.core import config
 from app.db.session import SessionLocal
@@ -39,6 +40,12 @@ app.include_router(
     users_router,
     prefix="/api/v1",
     tags=["users"],
+    dependencies=[Depends(get_current_active_user)],
+)
+app.include_router(
+    bot_router,
+    prefix="/api/v1",
+    tags=["bot"],
     dependencies=[Depends(get_current_active_user)],
 )
 app.include_router(auth_router, prefix="/api", tags=["auth"])

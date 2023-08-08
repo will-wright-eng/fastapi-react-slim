@@ -1,6 +1,6 @@
 import os
 
-PROJECT_NAME = "{{cookiecutter.project_name}}"
+PROJECT_NAME = "tracking-ui"
 
 SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
 

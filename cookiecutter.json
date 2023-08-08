@@ -9,6 +9,7 @@
   "superuser_password": "password",
   "secret_key": "super_secret",
   "gh_username": "will-wright-eng",
+  "openaikey": "alphanumeric-string",
   "_copy_without_render": [
     "Makefile",
     "LICENSE",
