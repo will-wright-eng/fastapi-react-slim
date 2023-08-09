@@ -1,4 +1,5 @@
-# FastAPI + React · ![build](https://github.com/will-wright-eng/fastapi-react-slim/workflows/build/badge.svg) [![license](https://img.shields.io/github/license/peaceiris/actions-gh-pages.svg)](LICENSE) [![Dependabot Status](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com)
+# FastAPI + React *Slim*
+[![Dependabot Status](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com)
 
 <div>
 <img src="assets/fastapi-logo.png" alt="fastapi-logo" height="60" /> <img
@@ -10,10 +11,12 @@ src="assets/sql-alchemy.png" alt="sql-alchemy" height="60" /> <img
 src="assets/openai-logo.png" alt="openai-logo" height="60" />
 </div>
 
+---
+
 A cookiecutter template for bootstrapping a FastAPI and React project using a
 modern stack.
 
-- A slim version of [Buuntu/fastapi-react](https://github.com/Buuntu/fastapi-react) that I've updated and added features to
+- A slim version of [Buuntu/fastapi-react](https://github.com/Buuntu/fastapi-react) that I've updated, added features to, and converted into a quick-n-dirty ChatGPT clone
 
 ---
 
@@ -60,8 +63,6 @@ modern stack.
     - [client](#client)
     - [user_token_headers](#user_token_headers)
     - [superuser_token_headers](#superuser_token_headers)
-- [Background Tasks](#background-tasks)
-  - [Flower](#flower)
 - [Frontend Utilities](#frontend-utilities)
   - [Utility Functions](#utility-functions)
     - [login](#login)
@@ -79,7 +80,7 @@ It is often laborsome to start a new project. 90% of the time you have to decide
 how to handle authentication, reverse proxies, docker containers, testing,
 server-side validation, linting, etc. before you can even get started.
 
-**FastAPI-React** serves to streamline and give you that functionality out of
+**FastAPI-React-Slim** serves to streamline and give you that functionality out of
 the box.
 
 It is meant as a lightweight/React alternative to [FastAPI's official fullstack
@@ -90,10 +91,12 @@ docs](https://fastapi.tiangolo.com/).
 
 ## Quick Start
 
+### Cookiecutter
+
 First, install cookiecutter if you don't already have it:
 
 ```bash
-pip3 install cookiecutter
+python3 -m pip install cookiecutter
 ```
 
 Second, install docker-compose if you don't already have it:
@@ -125,9 +128,7 @@ Without `--no-input ` you will need to put in a few variables and it will create
 
 </details>
 
-## Develop
-
-### Quick Start
+### Deploy Locally
 
 The following commands with initalize the app, build and start all the containers, then tail the docker-compose logs
 
@@ -143,6 +144,8 @@ Once you see the following logs, reload your browser
 {{cookiecutter.project_slug}}-frontend-1  | Starting the development server...
 {{cookiecutter.project_slug}}-frontend-1  | Compiled successfully!
 ```
+
+## Develop
 
 ### Step-by-step
 
@@ -294,27 +297,6 @@ def test_user_me(client, superuser_token_headers):
     )
     assert response.status_code == 200
 ```
-
-## Background Tasks
-
-This template comes with Celery and Redis Docker containers pre-configured for
-you. For any long running processes, it's recommended that you handle these
-using a task queue like Celery to avoid making the client wait for a request to
-finish. Some examples of this might be sending emails, uploading large files, or
-any long running, resource intensive tasks.
-
-There is an example task in `backend/app/tasks.py` and an example Celery test in
-`backend/app/tests/test_tasks.py`. This test runs synchronously, which is what
-Celery docs recommend.
-
-If you are not happy with Celery or Redis, it should be easy to swap these
-containers out with your favorite tools. Some suggested alternatives might be
-[Huey](https://github.com/coleifer/huey) as the task queue and
-[RabbitMQ](https://www.rabbitmq.com/) for the message broker.
-
-### Flower
-
-You can monitor tasks using Flower by going to http://localhost:5555
 
 ## Frontend Utilities
 
