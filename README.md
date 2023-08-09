@@ -6,7 +6,8 @@ src="assets/react-logo.png" alt="react-logo" height="60" /> &nbsp; &nbsp; <img
 src="assets/react-admin.png" alt="react-admin" height="60" /> &nbsp; &nbsp; <img
 src="assets/typescript.png" alt="react-logo" height="60" /> &nbsp;&nbsp;&nbsp;
 <img src="assets/postgres.png" alt="react-logo" height="60" /> <img
-src="assets/sql-alchemy.png" alt="sql-alchemy" height="60" />
+src="assets/sql-alchemy.png" alt="sql-alchemy" height="60" /> <img
+src="assets/openai-logo.png" alt="openai-logo" height="60" />
 </div>
 
 A cookiecutter template for bootstrapping a FastAPI and React project using a
