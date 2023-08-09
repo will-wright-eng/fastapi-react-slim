@@ -1,4 +1,4 @@
-# FastAPI + React · ![build](https://github.com/Buuntu/fastapi-react/workflows/build/badge.svg) [![license](https://img.shields.io/github/license/peaceiris/actions-gh-pages.svg)](LICENSE) [![Dependabot Status](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com)
+# FastAPI + React · ![build](https://github.com/will-wright-eng/fastapi-react-slim/workflows/build/badge.svg) [![license](https://img.shields.io/github/license/peaceiris/actions-gh-pages.svg)](LICENSE) [![Dependabot Status](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com)
 
 <div>
 <img src="assets/fastapi-logo.png" alt="fastapi-logo" height="60" /> <img
@@ -11,6 +11,8 @@ src="assets/sql-alchemy.png" alt="sql-alchemy" height="60" />
 
 A cookiecutter template for bootstrapping a FastAPI and React project using a
 modern stack.
+
+- A slim version of [Buuntu/fastapi-react](https://github.com/Buuntu/fastapi-react) that I've updated and added features to
 
 ---
 
@@ -101,27 +103,47 @@ docs](https://docs.docker.com/compose/install/).
 Then, in the directory you want your project to live:
 
 ```bash
-cookiecutter gh:Buuntu/fastapi-react
+cookiecutter --no-input gh:will-wright-eng/fastapi-react-slim
 ```
 
-You will need to put in a few variables and it will create a project directory
+Without `--no-input ` you will need to put in a few variables and it will create a project directory
 (called whatever you set for `project_slug`).
 
 <details><summary>Input Variables</summary>
 
-- project_name [default fastapi-react-project]
-- project_slug [default fastapi-react-project] - this is your project directory
+- project_slug [default fastapi-react-slim-project] - this is your project directory
+- project_name [default fastapireactslimproject]
+- project_name_title [default Fastapi React Slim Project]
 - port [default 8000]
 - postgres_user [default postgres]
 - postgres_password [default password]
 - postgres_database [default app]
-- superuser_email [default admin@fastapi-react-project.com]
+- superuser_email [default admin@fastapireactslimproject.com]
 - superuser_password [default password]
 - secret_key [default super_secret]
 
 </details>
 
 ## Develop
+
+### Quick Start
+
+The following commands with initalize the app, build and start all the containers, then tail the docker-compose logs
+
+```bash
+cd {{cookiecutter.project_slug}}
+make open # opens browser where your app will be available
+make init # details below
+```
+
+Once you see the following logs, reload your browser
+
+```
+{{cookiecutter.project_slug}}-frontend-1  | Starting the development server...
+{{cookiecutter.project_slug}}-frontend-1  | Compiled successfully!
+```
+
+### Step-by-step
 
 Change into your project directory and run:
 
