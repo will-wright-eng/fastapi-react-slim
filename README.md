@@ -1,4 +1,5 @@
-# FastAPI + React · ![build](https://github.com/will-wright-eng/fastapi-react-slim/workflows/build/badge.svg) [![license](https://img.shields.io/github/license/peaceiris/actions-gh-pages.svg)](LICENSE) [![Dependabot Status](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com)
+# FastAPI + React
+[![Dependabot Status](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com)
 
 <div>
 <img src="assets/fastapi-logo.png" alt="fastapi-logo" height="60" /> <img
