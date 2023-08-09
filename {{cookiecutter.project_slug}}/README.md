@@ -1,4 +1,4 @@
-# {{cookiecutter.project_name}}
+# {{cookiecutter.project_name_title}}
 
 ## Features
 
@@ -17,6 +17,23 @@
 The only dependencies for this project should be docker and docker-compose.
 
 ### Quick Start
+
+The following commands with initalize the app, build and start all the containers, then tail the docker-compose logs
+
+```bash
+cd {{cookiecutter.project_slug}}
+make open
+make init
+```
+
+Once you see the following logs, reload your browser
+
+```
+{{cookiecutter.project_slug}}-frontend-1  | Starting the development server...
+{{cookiecutter.project_slug}}-frontend-1  | Compiled successfully!
+```
+
+## The Details
 
 Starting the project with hot-reloading enabled
 (the first time it will take a while):
@@ -132,28 +149,34 @@ docker-compose logs -f name_of_service # frontend|backend|db
 
 ## Project Layout
 
-```
-backend
-└── app
-    ├── alembic
-    │   └── versions # where migrations are located
-    ├── api
-    │   └── api_v1
-    │       └── endpoints
-    ├── core    # config
-    ├── db      # db models
-    ├── tests   # pytest
-    └── main.py # entrypoint to backend
-
-frontend
-└── public
-└── src
-    ├── components
-    │   └── Home.tsx
-    ├── config
-    │   └── index.tsx   # constants
-    ├── __tests__
-    │   └── test_home.tsx
-    ├── index.tsx   # entrypoint
-    └── App.tsx     # handles routing
+```bash
+$tree . -d                                                           3:30:31
+.
+├── backend
+│   └── app
+│       ├── __pycache__
+│       ├── alembic # where migrations are located
+│       ├── api
+│       │   ├── api_v1
+│       │   │   └── routers
+│       │   │       └── tests
+│       │   └── dependencies
+│       ├── core    # config
+│       ├── db      # db models
+│       ├── tests   # pytest
+│       └── main.py # entrypoint to backend
+├── docs
+├── frontend
+│   ├── public
+│   └── src
+│       ├── __tests__
+│       ├── admin
+│       │   └── Users
+│       ├── config # constants
+│       ├── utils
+│       ├── views
+│       ├── index.tsx   # entrypoint
+│       └── App.tsx     # handles routing
+├── nginx
+└── scripts
 ```
