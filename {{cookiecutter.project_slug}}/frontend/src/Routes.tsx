@@ -37,7 +37,7 @@ export const Routes: FC = () => {
         <Redirect to="/" />
       </Switch>
       <footer>
-        <p>&copy; 2021 Webpage Dashboard. All rights reserved.</p>
+        <p>&copy; 2021 {{cookiecutter.project_name_title}}. All rights reserved.</p>
       </footer>
     </div>
   );

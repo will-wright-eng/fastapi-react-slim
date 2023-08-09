@@ -1,19 +1,21 @@
 {
-  "project_slug": "fastapi-react-project",
-  "project_name": "{{ cookiecutter.project_slug }}",
+  "project_slug": "fastapi-react-slim-project",
+  "project_name": "{{ cookiecutter.project_slug|replace('-', '')|replace(' ', '') }}",
+  "project_name_title": "{{ cookiecutter.project_slug|replace('-', ' ')|replace('_', ' ')|title }}",
   "port": "8000",
-  "postgres_user": "postgres",
-  "postgres_password": "password",
+  "postgres_user": "postgresusername",
+  "postgres_password": "changeme",
   "postgres_database": "app",
   "superuser_email": "admin@{{cookiecutter.project_name}}.com",
-  "superuser_password": "password",
-  "secret_key": "super_secret",
+  "superuser_password": "changeme",
+  "secret_key": "superdupersecretkey",
   "gh_username": "will-wright-eng",
-  "openaikey": "alphanumeric-string",
+  "openaikey": "longalphanumericstring",
   "_copy_without_render": [
     "Makefile",
     "LICENSE",
     ".pre-commit-config.yaml",
-    ".gitignore"
+    ".gitignore",
+    "frontend/src/views/Bot.tsx"
   ]
 }
