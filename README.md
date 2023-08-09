@@ -17,6 +17,7 @@ A cookiecutter template for bootstrapping a FastAPI and React project using a
 modern stack.
 
 - A slim version of [Buuntu/fastapi-react](https://github.com/Buuntu/fastapi-react) that I've updated, added features to, and converted into a quick-n-dirty ChatGPT clone
+- Note that Buuntu drew from Sebastian's Vue full stack template: [tiangolo/full-stack-fastapi-postgresql](https://github.com/tiangolo/full-stack-fastapi-postgresql)
 
 ---
 
@@ -26,7 +27,7 @@ modern stack.
   - JWT authentication using [OAuth2 "password
     flow"](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/) and
     PyJWT
-- **[React](https://reactjs.org/)** (with Typescript)
+- **[React 16](https://reactjs.org/)** (with Typescript)
   - [react-router v5](https://reacttraining.com/react-router/) to handle routing
   - [Utility functions](#Frontend-Utilities) and [higher-order
     components](#Higher-Order-Components) for handling authentication
