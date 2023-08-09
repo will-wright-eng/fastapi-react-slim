@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { useHistory } from 'react-router';
 
-import { Home, Login, SignUp, PrivateRoute, Bot } from './views';
+import { Home, Login, SignUp, PrivateRoute, Bot, Protected } from './views';
 import { Admin } from './admin';
 import { logout } from './utils/auth';
 import { useStylesRoutes } from './utils/style';
@@ -31,6 +31,7 @@ export const Routes: FC = () => {
             return null;
           }}
         />
+        <PrivateRoute path="/protected" component={Protected} />
         <Route exact path="/" component={Home} />
         <PrivateRoute path="/bot" component={Bot} />
         <Redirect to="/" />

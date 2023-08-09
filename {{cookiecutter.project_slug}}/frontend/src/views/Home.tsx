@@ -52,3 +52,4 @@ export const Home: FC = () => {
     </>
   );
 };
+

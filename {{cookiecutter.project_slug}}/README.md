@@ -132,6 +132,7 @@ docker-compose logs -f name_of_service # frontend|backend|db
 
 ## Project Layout
 
+<<<<<<< HEAD
 ```bash
 $tree . -d                                                           3:30:31
 .
@@ -162,4 +163,30 @@ $tree . -d                                                           3:30:31
 │       └── App.tsx     # handles routing
 ├── nginx
 └── scripts
+=======
+```
+backend
+└── app
+    ├── alembic
+    │   └── versions # where migrations are located
+    ├── api
+    │   └── api_v1
+    │       └── endpoints
+    ├── core    # config
+    ├── db      # db models
+    ├── tests   # pytest
+    └── main.py # entrypoint to backend
+
+frontend
+└── public
+└── src
+    ├── components
+    │   └── Home.tsx
+    ├── config
+    │   └── index.tsx   # constants
+    ├── __tests__
+    │   └── test_home.tsx
+    ├── index.tsx   # entrypoint
+    └── App.tsx     # handles routing
+>>>>>>> main
 ```

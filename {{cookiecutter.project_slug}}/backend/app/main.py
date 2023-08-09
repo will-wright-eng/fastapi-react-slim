@@ -3,11 +3,19 @@ from starlette.requests import Request
 import uvicorn
 
 from app.api.api_v1.routers.users import users_router
+<<<<<<< HEAD
 from app.api.api_v1.routers.bot import bot_router
+=======
+>>>>>>> main
 from app.api.api_v1.routers.auth import auth_router
 from app.core import config
 from app.db.session import SessionLocal
 from app.core.auth import get_current_active_user
+<<<<<<< HEAD
+=======
+from app.core.celery_app import celery_app
+from app import tasks
+>>>>>>> main
 
 
 app = FastAPI(
@@ -42,12 +50,15 @@ app.include_router(
     tags=["users"],
     dependencies=[Depends(get_current_active_user)],
 )
+<<<<<<< HEAD
 app.include_router(
     bot_router,
     prefix="/api/v1",
     tags=["bot"],
     dependencies=[Depends(get_current_active_user)],
 )
+=======
+>>>>>>> main
 app.include_router(auth_router, prefix="/api", tags=["auth"])
 
 if __name__ == "__main__":
