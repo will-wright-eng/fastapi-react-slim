@@ -122,7 +122,6 @@ export const useStylesRoutes = makeStyles((theme) => ({
 
 }));
 
-
 export const useStylesHome = makeStyles((theme) => ({
   nav: {
     position: 'absolute',
@@ -147,9 +146,18 @@ export const useStylesHome = makeStyles((theme) => ({
   },
 }));
 
-export const useStyles = makeStyles((theme) => ({
-  link: {
-    color: '#61dafb',
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(2),
+  },
+  padding: {
+    padding: theme.spacing(1),
+  },
+  button: {
+    textTransform: 'none',
+  },
+  marginTop: {
+    marginTop: 10,
   },
 }));
 

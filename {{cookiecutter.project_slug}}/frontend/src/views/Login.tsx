@@ -14,21 +14,7 @@ import { Redirect } from 'react-router-dom';
 import { useHistory } from 'react-router';
 
 import { login, isAuthenticated } from '../utils/auth';
-
-const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(2),
-  },
-  padding: {
-    padding: theme.spacing(1),
-  },
-  button: {
-    textTransform: 'none',
-  },
-  marginTop: {
-    marginTop: 10,
-  },
-}));
+import { useStyles } from '../utils/style';
 
 export const Login: FC = () => {
   const classes = useStyles();
