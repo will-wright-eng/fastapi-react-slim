@@ -18,6 +18,23 @@ The only dependencies for this project should be docker and docker-compose.
 
 ### Quick Start
 
+The following commands with initalize the app, build and start all the containers, then tail the docker-compose logs
+
+```bash
+cd {{cookiecutter.project_slug}}
+make open
+make init
+```
+
+Once you see the following logs, reload your browser
+
+```
+{{cookiecutter.project_slug}}-frontend-1  | Starting the development server...
+{{cookiecutter.project_slug}}-frontend-1  | Compiled successfully!
+```
+
+## The Details
+
 Starting the project with hot-reloading enabled
 (the first time it will take a while):
 
